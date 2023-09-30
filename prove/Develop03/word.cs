@@ -26,6 +26,6 @@ public class Word
 
     public string GetDisplayText()
     {
-        return _isHidden ? "******" : _text;
+        return _isHidden ? "_______" : _text;
     }
 }
