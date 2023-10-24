@@ -2,19 +2,21 @@ public class Location
 {
     private string name;
     private string description;
+    private string storyline;
     private bool hasChallenge;
-    private MathProblem challenge;
+    private Challenge challenge;
 
-    public Location(string name, string description)
+    public Location(string name, string description, string storyline)
     {
         this.name = name;
         this.description = description;
+        this.storyline = storyline;
     }
 
-    public void SetChallenge(MathProblem problem)
+    public void SetChallenge(Challenge challenge)
     {
         hasChallenge = true;
-        challenge = problem;
+        this.challenge = challenge;
     }
 
     public string GetDescription()
@@ -22,12 +24,17 @@ public class Location
         return description;
     }
 
+    public string GetStoryline()
+    {
+        return storyline;
+    }
+
     public bool HasChallenge
     {
         get { return hasChallenge; }
     }
 
-    public MathProblem GetChallenge()
+    public Challenge GetChallenge()
     {
         return challenge;
     }
